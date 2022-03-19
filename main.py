@@ -1,3 +1,8 @@
-from math import ceil as above
+import os
+from indeed import extract_indeed_pages,extract_indeed_jobs
 
-print(above(1.3))
+os.system('clear')
+
+last_indeed_pages = extract_indeed_pages()
+
+extract_indeed_jobs(last_indeed_pages)

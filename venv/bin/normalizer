@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/home/runner/Python-Web-Scrapping/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
