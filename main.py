@@ -1,10 +1,13 @@
 import os
-from indeed import extract_indeed_pages,extract_indeed_jobs
+from indeed import get_jobs as get_indeed_jobs
+from stackoverflow import get_jobs as get_stackoverflow_jobs
+from save import save_to_file
+
 
 os.system('clear')
 
-last_indeed_pages = extract_indeed_pages()
+indeed_jobs = get_indeed_jobs()
+stackoverflow_jobs = get_stackoverflow_jobs()
 
-indeed_jobs = extract_indeed_jobs(last_indeed_pages)
-
-print(indeed_jobs)
+jobs = indeed_jobs + stackoverflow_jobs
+save_to_file(jobs)
